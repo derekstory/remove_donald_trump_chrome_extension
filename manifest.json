@@ -1,0 +1,13 @@
+{
+  "name": "Remove Donald Trump from Facebook",
+  "description": "Remove Donald Trump from Facebook Homepage",
+  "version": "1.2",
+  "manifest_version": 2,
+  "content_scripts": [
+      {
+	  "matches":["*://*.facebook.com/*"],
+          "run_at": "document_start",
+          "js":["jquery.js", "facebook_filter.js"]
+      }
+  ]
+}
