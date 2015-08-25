@@ -7,7 +7,7 @@
       {
 	  "matches":["*://*.facebook.com/*"],
           "run_at": "document_start",
-          "js":["jquery.js", "facebook_filter.js"]
+          "js":["facebook_filter.js"]
       }
   ]
 }

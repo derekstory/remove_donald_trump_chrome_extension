@@ -1,17 +1,18 @@
-$(document).ready(function() {
-
+(function() {
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             var newNodes = mutation.addedNodes;
-            if (newNodes !== null) { 
-                $('.userContentWrapper').each(function() {
-                    var post = $(this);
-                    var postText = post.text();
-                    var postMatch = postText.toLowerCase().indexOf("donald") >= 0 && postText.toLowerCase().indexOf("trump") >= 0;
-                    if(postMatch) {
-                        post.hide();
+            if (newNodes !== null) {
+
+                var nodes = document.getElementsByClassName('userContentWrapper');
+                for (var ii = 0, nn = nodes.length; ii < nn; ii++)
+                {
+                    var text = nodes[ii] ? nodes[ii].textContent.toLowerCase() : '';
+                    if (text && text.indexOf('donald') >= 0 && text.indexOf('trump') >= 0)
+                    {
+                        nodes[ii].style.display = 'none';
                     }
-                });
+                }
             }
         });
     });
@@ -23,4 +24,4 @@ $(document).ready(function() {
         characterData: false,
     });
     
-});
+})();
