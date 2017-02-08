@@ -4,7 +4,7 @@
             var newNodes = mutation.addedNodes;
             if (newNodes !== null) {
 
-                var nodes = document.querySelectorAll('.userContentWrapper, ._1bar, ._5my2, ._4qjp, ._2kg4');
+                var nodes = document.querySelectorAll('.fbUserContent, .userContentWrapper, ._1bar, ._5my2, ._4qjp, ._2kg4, ._4-u2');
                 for (var ii = 0, nn = nodes.length; ii < nn; ii++)
                 {
                     var text = nodes[ii] ? nodes[ii].textContent.toLowerCase() : '';
