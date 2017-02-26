@@ -1,7 +1,7 @@
 {
     "name": "Remove Donald Trump from Facebook",
     "description": "Remove Donald Trump from Facebook Homepage",
-    "version": "2.45",
+    "version": "3.0",
     "manifest_version": 2,
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "icons": {  "48": "icon48.png",
@@ -15,5 +15,8 @@
     ],
     "background": {
         "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": "icon48.png"
     }
 }
